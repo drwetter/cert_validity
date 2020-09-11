@@ -20,7 +20,7 @@ fi
 port="${port:-443}"
 
 if [[ -z "$2" ]]; then
-	days=(1 3 5 10 15 30)
+	days=(1 2 3 5 10 15 30)
 else
 	days=($2)
 fi
