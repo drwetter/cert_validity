@@ -8,8 +8,8 @@ Small hackish script to monitor expiration time
 
 ### usage
 
-* cert_validity.sh <hostname> (port 443 assumed)
-* cert_validity.sh <hostname:port>
+* ``cert_validity.sh <hostname>`` (port 443 assumed)
+* ``cert_validity.sh <hostname:port>``
 
 It would then warn if the expiry date is lower than "1 2 3 5 10 15 30" days, that means on the 29th day, 14th day, 9th day,... ahead of expiration time.
 
