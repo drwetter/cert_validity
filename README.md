@@ -16,7 +16,7 @@ It would then warn if the expiry date is lower than "1 2 3 5 10 15 30" days, tha
 If you don't like this you can supply another sequence as a second argument -- mind the quotes:
 
 ```
-prompt> ./cert_validity.sh testssl.sh "2 3 5 7 10 15 80"
+prompt> ./cert_validity.sh testssl.sh "2 3 5 7 10 15 80 100"
 Certificate from "testssl.sh:443" expires in < 100 days
  --> at Dec  6 12:59:34 2020 GMT
 prompt> 
