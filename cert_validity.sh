@@ -28,9 +28,8 @@ secs=()
 
 for (( i=0 ; i<${#days[@]} ; i++ )) ; do
     secs[$i]=$(( ${days[$i]} * 24 * 60 * 60 ))
-    # echo "${secs[$i]}";
+
 done
-# echo ${secs[@]}
 
 cert="$(echo | openssl s_client -connect $hostn:$port -servername $hostn 2>/dev/null  | awk '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/ { print $0 }')"
 expire="$(openssl x509 -checkend 1 <<< $cert)"
@@ -45,7 +44,6 @@ else
 		sec=$(( ${days[$i]} * 24 * 60 * 60 ))
 		expire="$(openssl x509 -checkend $sec <<< $cert)"
 		if [[ ! $expire =~ not ]]; then
-# echo $((259200 / 24 /60/60))
 			echo "Certificate from \"$hostn:$port\" expires in < ${days[$i]} days"
 			echo " --> at $enddate"
 			exit ${days[$i]}
