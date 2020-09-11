@@ -29,4 +29,4 @@ You should best not run this manually but in a crontab like
 42 22 * * * MAILTO=recipient@example.com <PATH>/cert_validity.sh testssl.sh "1 2 3 4 5 6 8 9 10 11 12 13 14 15"
 ```
 
-MAILTO is only needed when the owner's crontab mail is ending up where you don't intended it.
+MAILTO is only needed when the owner's crontab mail is ending up where you don't want it.
